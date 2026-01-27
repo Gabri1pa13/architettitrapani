@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management for Expats in Sicily | Studio 4e</title>
+    <meta name="description" content="Renovating from abroad? Discover why you need a 'Direttore dei Lavori' in Trapani. We manage your site, budget, and timeline while you are away.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar" style="background: #1a1a1a;">
+        <div class="container nav-container">
+            <div class="logo">ARCHITETTI<span class="highlight">TRAPANI</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Magazine</a></li>
+                <li><a href="index.html#contatti" class="btn-nav">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header" style="height: 60vh; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('images/ufficio-studio4e-palermo-centro-piazza-santoliva-19.webp');">
+        <div class="container">
+            <span class="subtitle" style="background: black; padding: 5px 10px;">SERVICES</span>
+            <h1>The Role of the Project Manager (Direttore dei Lavori)</h1>
+        </div>
+    </header>
+
+    <article class="article-body">
+        <p class="lead"><strong>You live in London, New York, or Milan. You bought a house in Trapani. Who is checking the construction site on Tuesday morning?</strong></p>
+
+        <p>In Italy, the <em>Direttore dei Lavori</em> (DL) is not just a project manager; it's a legal role. We are responsible for ensuring the building complies with the permit and the law. But for our international clients, we do much more.</p>
+
+        <h2>1. We are your "Bad Cop"</h2>
+        <p>Construction workers can be relaxed with timelines. We are not. We handle the builders, check the quality of the concrete, and ensure they show up. We speak their dialect, but we report to you in English.</p>
+
+        <h2>2. Budget Control</h2>
+        <p>The nightmare of every investor is the "extra cost". We validate every invoice before you pay it. If a builder asks for more money, we verify if it's legitimate or not. You never pay blindly.</p>
+
+        <div style="margin: 40px 0;">
+            <img src="images/dettagli-esterni-villa-rivestimento-corten.webp" alt="Construction detail check" style="width: 100%; border-radius: 4px;">
+            <p class="caption">We check the details that matter: insulation, window fitting, and waterproofing.</p>
+        </div>
+
+        <h2>3. Weekly Reports</h2>
+        <p>You shouldn't have to guess what's happening. We send weekly updates via WhatsApp or Email with photos and videos of the progress, so you feel like you are on-site.</p>
+
+        <div class="article-cta">
+            <h3>Need peace of mind?</h3>
+            <p>Let us manage your renovation. On time, on budget, zero stress.</p>
+            <a href="index.html#contatti" class="btn-primary">Talk to us</a>
+        </div>
+    </article>
+
+    <footer><div class="container"><p>&copy; 2026 Architetti Trapani by Studio 4e.</p></div></footer>
+
+<div class="floating-contact-wrap" id="contactWidget">
+
+    <div class="contact-options">
+        <a href="tel:+393299736697" class="contact-item phone" title="Chiama ora">
+            📞
+        </a>
+        <a href="https://wa.me/393299736697?text=Buongiorno%2C%20vorrei%20informazioni%20su%20un%20progetto." class="contact-item whatsapp" target="_blank" title="Scrivi su WhatsApp">
+            💬
+        </a>
+        <a href="mailto:info@studio4e.it" class="contact-item email" title="Invia Email">
+            ✉️
+        </a>
+    </div>
+
+    <button class="contact-fab" onclick="toggleContactMenu()" aria-label="Contattaci">
+        📞
+    </button>
+</div>
+
+<script>
+    function toggleContactMenu() {
+        const widget = document.getElementById('contactWidget');
+        const options = widget.querySelector('.contact-options');
+        widget.classList.toggle('open');
+        options.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>

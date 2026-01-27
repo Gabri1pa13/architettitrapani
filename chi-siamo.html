@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Siamo | Architetti Trapani - Studio 4e</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">ARCHITETTI<span class="highlight">TRAPANI</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chi-siamo.html" class="active">Chi Siamo</a></li>
+                <li><a href="index.html#portfolio">Progetti</a></li>
+                <li><a href="index.html#contatti" class="btn-nav">Contattaci</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header" style="background-image: url('images/ufficio-studio4e-palermo-centro-piazza-santoliva-19.webp');">
+        <div class="container">
+            <h1>Radici locali, Visione globale.</h1>
+        </div>
+    </header>
+
+    <section class="about-content">
+        <div class="container text-block">
+            <h2>Architetti in Sicilia Occidentale</h2>
+            <p class="lead">Studio 4e porta a Trapani un approccio all'architettura premiato a livello internazionale, guidato dalla profonda conoscenza locale dell'architetto Maria Rosaria Piazza.</p>
+            
+            <hr>
+
+            <h3>Il Territorio come materia prima</h3>
+            <p>La provincia di Trapani non è solo un luogo dove costruire: è un paesaggio da ascoltare. Che si tratti di restaurare un <strong>Baglio storico a Marsala</strong>, di inserire una <strong>villa contemporanea tra gli ulivi di Selinunte</strong> o di riqualificare una cantina a Menfi, la sfida è sempre doppia: rispettare l'anima antica di questi luoghi e rispondere alle esigenze dell'abitare moderno.</p>
+
+            <h3>La nostra forza: Struttura e Radici</h3>
+            <p><strong>Studio 4e</strong> nasce per vincere questa sfida. Fondato a Palermo, lo studio ha nel suo DNA il territorio trapanese grazie alla socia fondatrice <strong>Maria Rosaria Piazza</strong>, originaria di questi luoghi. Questa doppia anima è la nostra garanzia:</p>
+            <ul>
+                <li><strong>La Struttura:</strong> Portiamo l'organizzazione, il controllo costi e la gestione burocratica di uno studio strutturato, capace di gestire investitori esteri e progetti complessi.</li>
+                <li><strong>Le Radici:</strong> Conosciamo le maestranze locali, la pietra di Partanna, il tufo di Favignana e le dinamiche delle amministrazioni locali (Genio Civile, Soprintendenza).</li>
+            </ul>
+
+            <div class="highlight-box">
+                <h4>Award Winning Architecture</h4>
+                <p>Il nostro lavoro sul <strong>Baglio Donna Franca</strong>, premiato con il prestigioso <strong>BIG SEE Architecture Award 2023</strong> in Slovenia, è la prova che l'architettura siciliana può competere sui palcoscenici internazionali senza perdere la sua identità.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <a href="index.html#contatti" class="btn-primary">Parla con noi del tuo progetto</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Architetti Trapani by Studio 4e.</p>
+        </div>
+    </footer>
+
+
+<div class="floating-contact-wrap" id="contactWidget">
+
+    <div class="contact-options">
+        <a href="tel:+393299736697" class="contact-item phone" title="Chiama ora">
+            📞
+        </a>
+        <a href="https://wa.me/393299736697?text=Buongiorno%2C%20vorrei%20informazioni%20su%20un%20progetto." class="contact-item whatsapp" target="_blank" title="Scrivi su WhatsApp">
+            💬
+        </a>
+        <a href="mailto:info@studio4e.it" class="contact-item email" title="Invia Email">
+            ✉️
+        </a>
+    </div>
+
+    <button class="contact-fab" onclick="toggleContactMenu()" aria-label="Contattaci">
+        📞
+    </button>
+</div>
+
+<script>
+    function toggleContactMenu() {
+        const widget = document.getElementById('contactWidget');
+        const options = widget.querySelector('.contact-options');
+        widget.classList.toggle('open');
+        options.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>

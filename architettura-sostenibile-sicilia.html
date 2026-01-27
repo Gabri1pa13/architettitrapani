@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architettura Sostenibile in Sicilia: Raffrescare senza Condizionatori | Studio 4e</title>
+    <meta name="description" content="Come progettare case fresche a Trapani sfruttando la ventilazione naturale e i materiali locali. Bioedilizia e risparmio energetico.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" style="background: #1a1a1a;">
+        <div class="container nav-container">
+            <div class="logo">ARCHITETTI<span class="highlight">TRAPANI</span></div>
+            <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="blog.html">Magazine</a></li><li><a href="index.html#contatti" class="btn-nav">Contattaci</a></li></ul>
+        </div>
+    </nav>
+
+    <header class="page-header" style="height: 60vh; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('images/garden.webp');">
+        <div class="container">
+            <span class="subtitle" style="background: black; padding: 5px 10px;">GREEN & DESIGN</span>
+            <h1>Case Fresche senza Condizionatori: L'Architettura Passiva</h1>
+        </div>
+    </header>
+
+    <article class="article-body">
+        <p class="lead"><strong>In Sicilia, la sostenibilità non è mettere i pannelli solari sul tetto. È progettare la casa in modo che non si surriscaldi.</strong></p>
+
+        <p>I nostri nonni costruivano Bagli e Dammusi che restavano freschi anche ad agosto. Come? Muri spessi e ventilazione. Oggi, con materiali moderni, possiamo fare ancora meglio.</p>
+
+        <h2>Le Tecniche che usiamo</h2>
+        <ul>
+            <li><strong>Ventilazione Incrociata:</strong> Posizioniamo le finestre per creare correnti d'aria naturali che portano via il calore (Effetto Camino).</li>
+            <li><strong>Schermature Solari:</strong> Pergolati, frangisole e aggetti calcolati per bloccare il sole estivo (alto) ma far entrare quello invernale (basso).</li>
+            <li><strong>Inerzia Termica:</strong> Usiamo la pietra locale o blocchi massivi per assorbire il fresco della notte e rilasciarlo di giorno.</li>
+        </ul>
+
+        <div style="margin: 40px 0;">
+            <img src="images/dettagli-esterni.webp" alt="Pergolato bioclimatico" style="width: 100%; border-radius: 4px;">
+            <p class="caption">Un pergolato ben progettato riduce la temperatura interna di 4-5 gradi senza spendere un euro di elettricità.</p>
+        </div>
+
+        <div class="article-cta">
+            <h3>Vuoi una casa a basso consumo?</h3>
+            <p>Progettiamo edifici NZEB (Near Zero Energy Building) che rispettano l'ambiente.</p>
+            <a href="index.html#contatti" class="btn-primary">Scopri la Bioedilizia</a>
+        </div>
+    </article>
+    <footer><div class="container"><p>&copy; 2026 Architetti Trapani by Studio 4e.</p></div></footer>
+
+<div class="floating-contact-wrap" id="contactWidget">
+
+    <div class="contact-options">
+        <a href="tel:+393299736697" class="contact-item phone" title="Chiama ora">
+            📞
+        </a>
+        <a href="https://wa.me/393299736697?text=Buongiorno%2C%20vorrei%20informazioni%20su%20un%20progetto." class="contact-item whatsapp" target="_blank" title="Scrivi su WhatsApp">
+            💬
+        </a>
+        <a href="mailto:info@studio4e.it" class="contact-item email" title="Invia Email">
+            ✉️
+        </a>
+    </div>
+
+    <button class="contact-fab" onclick="toggleContactMenu()" aria-label="Contattaci">
+        📞
+    </button>
+</div>
+
+<script>
+    function toggleContactMenu() {
+        const widget = document.getElementById('contactWidget');
+        const options = widget.querySelector('.contact-options');
+        widget.classList.toggle('open');
+        options.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>

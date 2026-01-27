@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stile Pantesco vs Eoliano: Quale architettura scegliere? | Studio 4e</title>
+    <meta name="description" content="Dammusi di Pantelleria o Cubi bianchi delle Egadi? Guida agli stili architettonici delle isole siciliane per la tua villa o casa vacanze.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar" style="background: #1a1a1a;">
+        <div class="container nav-container">
+            <div class="logo">ARCHITETTI<span class="highlight">TRAPANI</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Magazine</a></li>
+                <li><a href="index.html#contatti" class="btn-nav">Contattaci</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header" style="height: 60vh; background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url('images/dettagli-esterni.webp');">
+        <div class="container">
+            <span class="subtitle" style="background: black; padding: 5px 10px;">DESIGN & TERRITORIO</span>
+            <h1>Architettura delle Isole: Pantesco o Eoliano?</h1>
+        </div>
+    </header>
+
+    <article class="article-body">
+        <p class="lead"><strong>Quando si progetta una villa al mare in provincia di Trapani, la scelta dello stile non è solo estetica, è climatica. Dammuso lavico o cubo bianco?</strong></p>
+
+        <p>Spesso i clienti ci chiedono una "casa in stile isolano". Ma quale isola? Pantelleria e le Egadi (Favignana) hanno linguaggi architettonici opposti.</p>
+
+        <h2>Lo Stile Pantesco (Pantelleria)</h2>
+        <p>Il <strong>Dammuso</strong> è figlio della pietra lavica scura. È un'architettura introversa, pensata per proteggersi dal vento forte. Muri spessi fino a un metro, tetti a cupola bianca per raccogliere l'acqua e giardini arabi chiusi da mura alte per proteggere gli agrumi. È perfetto se cerchi privacy assoluta e frescura naturale.</p>
+
+        <h2>Lo Stile delle Egadi (Favignana/Levanzo)</h2>
+        <p>Qui domina il <strong>Tufo Calcarenitico</strong>. L'architettura è più squadrata, i volumi sono "cubi bianchi" o color tufo naturale. È un'architettura più aperta verso il mare rispetto a Pantelleria, con grandi terrazze coperte da pergolati per vivere fuori.</p>
+
+        <div style="margin: 40px 0;">
+            <img src="images/garden.webp" alt="Giardino mediterraneo interno" style="width: 100%; border-radius: 4px;">
+            <p class="caption">Un giardino protetto, tipico dell'architettura isolana per ripararsi dal vento di Maestrale.</p>
+        </div>
+
+        <h2>Il Design Contemporaneo</h2>
+        <p>In Studio 4e non copiamo il passato, lo reinterpretiamo. Usiamo la pietra a secco locale (che cambia da zona a zona) per rivestire volumi moderni con grandi vetrate, unendo il fascino della tradizione al comfort visivo contemporaneo.</p>
+
+        <div class="article-cta">
+            <h3>Vuoi una villa che rispetti il luogo?</h3>
+            <p>Progettiamo architetture che sembrano nate dal paesaggio.</p>
+            <a href="index.html#contatti" class="btn-primary">Vedi Portfolio Ville</a>
+        </div>
+    </article>
+
+    <footer><div class="container"><p>&copy; 2026 Architetti Trapani by Studio 4e.</p></div></footer>
+
+<div class="floating-contact-wrap" id="contactWidget">
+
+    <div class="contact-options">
+        <a href="tel:+393299736697" class="contact-item phone" title="Chiama ora">
+            📞
+        </a>
+        <a href="https://wa.me/393299736697?text=Buongiorno%2C%20vorrei%20informazioni%20su%20un%20progetto." class="contact-item whatsapp" target="_blank" title="Scrivi su WhatsApp">
+            💬
+        </a>
+        <a href="mailto:info@studio4e.it" class="contact-item email" title="Invia Email">
+            ✉️
+        </a>
+    </div>
+
+    <button class="contact-fab" onclick="toggleContactMenu()" aria-label="Contattaci">
+        📞
+    </button>
+</div>
+
+<script>
+    function toggleContactMenu() {
+        const widget = document.getElementById('contactWidget');
+        const options = widget.querySelector('.contact-options');
+        widget.classList.toggle('open');
+        options.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>

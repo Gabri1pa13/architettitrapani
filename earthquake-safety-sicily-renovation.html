@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthquake Safety in Sicily: Renovating Historic Buildings | Studio 4e</title>
+    <meta name="description" content="Is Sicily safe? How we retrofit historic stone buildings (Bagli/Rustici) to withstand seismic activity without ruining their aesthetics.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" style="background: #1a1a1a;">
+        <div class="container nav-container">
+            <div class="logo">ARCHITETTI<span class="highlight">TRAPANI</span></div>
+            <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="blog.html">Magazine</a></li><li><a href="index.html#contatti" class="btn-nav">Contact Us</a></li></ul>
+        </div>
+    </nav>
+
+    <header class="page-header" style="height: 60vh; background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('images/ristorante-sushi-palermo.webp');">
+        <div class="container">
+            <span class="subtitle" style="background: black; padding: 5px 10px;">SAFETY & ENGINEERING</span>
+            <h1>Earthquake Safety: Renovating Stone Buildings</h1>
+        </div>
+    </header>
+
+    <article class="article-body">
+        <p class="lead"><strong>One of the first questions from our US and Japanese clients is: "Is this stone house safe during an earthquake?" The answer depends on the renovation.</strong></p>
+
+        <p>Sicily is a seismic zone. Historic buildings (Bagli, Rustici) made of stone and tuff are beautiful, but they need structural help to be safe by modern standards.</p>
+
+        <h2>How we retrofit without ruining the look</h2>
+        <p>We don't need to cover the beautiful stone with concrete. We use invisible or integrated techniques:</p>
+        <ul>
+            <li><strong>Steel Tie-Rods (Catene):</strong> Steel bars that hold the walls together, preventing them from opening outwards.</li>
+            <li><strong>Ring Beams (Cordoli):</strong> A reinforced ring at the top of the walls (hidden under the roof) that ties the box together.</li>
+            <li><strong>Carbon Fiber:</strong> We can reinforce vaults and arches with thin layers of carbon fiber that are invisible after plastering.</li>
+        </ul>
+
+        <div style="margin: 40px 0;">
+            <img src="images/ristorante-sushi-palermo.webp" alt="Reinforced stone arches" style="width: 100%; border-radius: 4px;">
+            <p class="caption">These historic arches have been structurally reinforced, yet they look completely original.</p>
+        </div>
+
+        <div class="article-cta">
+            <h3>Concerned about structure?</h3>
+            <p>Our team includes structural engineers specializing in seismic retrofitting for heritage buildings.</p>
+            <a href="index.html#contatti" class="btn-primary">Structural Check</a>
+        </div>
+    </article>
+    <footer><div class="container"><p>&copy; 2026 Architetti Trapani by Studio 4e.</p></div></footer>
+
+<div class="floating-contact-wrap" id="contactWidget">
+
+    <div class="contact-options">
+        <a href="tel:+393299736697" class="contact-item phone" title="Chiama ora">
+            📞
+        </a>
+        <a href="https://wa.me/393299736697?text=Buongiorno%2C%20vorrei%20informazioni%20su%20un%20progetto." class="contact-item whatsapp" target="_blank" title="Scrivi su WhatsApp">
+            💬
+        </a>
+        <a href="mailto:info@studio4e.it" class="contact-item email" title="Invia Email">
+            ✉️
+        </a>
+    </div>
+
+    <button class="contact-fab" onclick="toggleContactMenu()" aria-label="Contattaci">
+        📞
+    </button>
+</div>
+
+<script>
+    function toggleContactMenu() {
+        const widget = document.getElementById('contactWidget');
+        const options = widget.querySelector('.contact-options');
+        widget.classList.toggle('open');
+        options.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>

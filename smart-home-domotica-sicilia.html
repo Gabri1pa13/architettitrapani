@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Sicily: Managing your Villa from New York | Studio 4e</title>
+    <meta name="description" content="How domotics allows you to control your Sicilian villa remotely. Security, humidity control, and energy management for absent owners.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar" style="background: #1a1a1a;">
+        <div class="container nav-container"><div class="logo">ARCHITETTI<span class="highlight">TRAPANI</span></div><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="blog.html">Magazine</a></li><li><a href="index.html#contatti" class="btn-nav">Contact Us</a></li></ul></div>
+    </nav>
+    <header class="page-header" style="height: 60vh; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('images/interni-villa-a-partanna-di-sera.webp');">
+        <div class="container"><span class="subtitle" style="background: black; padding: 5px 10px;">TECH & LUXURY</span><h1>Control your Sicilian Villa from an App</h1></div>
+    </header>
+    <article class="article-body">
+        <p class="lead"><strong>You live in London or New York. Your villa is in Trapani. How do you know if the humidity is rising or if the gardener actually showed up? The answer is Domotics.</strong></p>
+        
+        <h2>The "Welcome Mode"</h2>
+        <p>Imagine landing at Palermo Airport. You open your phone, press "Arrival", and your villa wakes up: the AC turns on to reach 22°C, the garden lights illuminate the driveway, and the shutters open. This is standard in our luxury renovations.</p>
+        
+        <h2>Security & Maintenance</h2>
+        <p>A smart home isn't just a toy; it's an investment guardian.
+        <ul>
+            <li><strong>Water leak sensors:</strong> Shut off the main valve automatically if a leak is detected while you are away.</li>
+            <li><strong>Humidity control:</strong> Automatically turn on dehumidifiers if the Sicilian winter gets too damp, protecting your furniture and art.</li>
+            <li><strong>Video access:</strong> Check the perimeter cameras instantly.</li>
+        </ul></p>
+        
+        <div class="article-cta"><h3>Tech-savvy renovation?</h3><p>We integrate invisible technology into historic homes.</p><a href="index.html#contatti" class="btn-primary">Smart Home Design</a></div>
+    </article>
+    <footer><div class="container"><p>&copy; 2026 Architetti Trapani by Studio 4e.</p></div></footer>
+
+<div class="floating-contact-wrap" id="contactWidget">
+
+    <div class="contact-options">
+        <a href="tel:+393299736697" class="contact-item phone" title="Chiama ora">
+            📞
+        </a>
+        <a href="https://wa.me/393299736697?text=Buongiorno%2C%20vorrei%20informazioni%20su%20un%20progetto." class="contact-item whatsapp" target="_blank" title="Scrivi su WhatsApp">
+            💬
+        </a>
+        <a href="mailto:info@studio4e.it" class="contact-item email" title="Invia Email">
+            ✉️
+        </a>
+    </div>
+
+    <button class="contact-fab" onclick="toggleContactMenu()" aria-label="Contattaci">
+        📞
+    </button>
+</div>
+
+<script>
+    function toggleContactMenu() {
+        const widget = document.getElementById('contactWidget');
+        const options = widget.querySelector('.contact-options');
+        widget.classList.toggle('open');
+        options.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>

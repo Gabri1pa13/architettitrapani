@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio Destinazione d'Uso: Da Magazzino a B&B o Locale | Studio 4e</title>
+    <meta name="description" content="Vuoi trasformare un piano terra o un garage in struttura ricettiva o commerciale a Trapani? Guida all'agibilità, requisiti igienici e oneri urbanistici.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar" style="background: #1a1a1a;">
+        <div class="container nav-container">
+            <div class="logo">ARCHITETTI<span class="highlight">TRAPANI</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Magazine</a></li>
+                <li><a href="index.html#contatti" class="btn-nav">Contattaci</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header" style="height: 60vh; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('images/gelateria-palermo-centro.webp');">
+        <div class="container">
+            <span class="subtitle" style="background: black; padding: 5px 10px;">BUSINESS & NORMATIVA</span>
+            <h1>Da Magazzino a Business: Il Cambio di Destinazione d'Uso</h1>
+        </div>
+    </header>
+
+    <article class="article-body">
+        <p class="lead"><strong>Il centro storico di Trapani e Marsala è pieno di piano terra accatastati come C/2 (Magazzini) che valgono oro se trasformati in C/1 (Negozi) o B&B. Ma è sempre possibile?</strong></p>
+
+        <p>Molti investitori acquistano "bassi" pensando di farci una suite per turisti, per poi scoprire che il soffitto è troppo basso per la legge. Ecco i 3 requisiti fondamentali.</p>
+
+        <h2>1. Le Altezze Minime</h2>
+        <p>Per l'abitabilità (e quindi per affittare a turisti) servono generalmente <strong>2,70 metri</strong> di altezza. Nei centri storici ci sono deroghe (spesso fino a 2,40m o 2,20m per i bagni), ma vanno verificate nel Regolamento Edilizio Comunale specifico.</p>
+
+        <h2>2. I Rapporti Aeroilluminanti</h2>
+        <p>La superficie delle finestre deve essere almeno 1/8 della superficie del pavimento. Se il locale è cieco o ha solo la porta d'ingresso, bisognerà installare sistemi di ventilazione meccanica forzata (VMC) se il regolamento locale lo permette per uso commerciale.</p>
+
+        <div style="margin: 40px 0;">
+            <img src="images/foto-esterna-gelateria.webp" alt="Locale commerciale ristrutturato" style="width: 100%; border-radius: 4px;">
+            <p class="caption">Un ex magazzino trasformato in attività commerciale di successo: la chiave è la vetrina e l'impiantistica.</p>
+        </div>
+
+        <h2>3. Gli Oneri di Urbanizzazione</h2>
+        <p>Cambiare uso costa. Bisogna pagare al Comune gli oneri perché si "aumenta il carico urbanistico" (più persone useranno fogne, parcheggi, ecc). Il costo varia, ma va calcolato nel Business Plan prima dell'acquisto.</p>
+
+        <div class="article-cta">
+            <h3>Vuoi aprire un'attività?</h3>
+            <p>Controlliamo se l'immobile ha i requisiti prima che tu firmi il contratto d'affitto o acquisto.</p>
+            <a href="index.html#contatti" class="btn-primary">Verifica Agibilità</a>
+        </div>
+    </article>
+
+    <footer><div class="container"><p>&copy; 2026 Architetti Trapani by Studio 4e.</p></div></footer>
+
+<div class="floating-contact-wrap" id="contactWidget">
+
+    <div class="contact-options">
+        <a href="tel:+393299736697" class="contact-item phone" title="Chiama ora">
+            📞
+        </a>
+        <a href="https://wa.me/393299736697?text=Buongiorno%2C%20vorrei%20informazioni%20su%20un%20progetto." class="contact-item whatsapp" target="_blank" title="Scrivi su WhatsApp">
+            💬
+        </a>
+        <a href="mailto:info@studio4e.it" class="contact-item email" title="Invia Email">
+            ✉️
+        </a>
+    </div>
+
+    <button class="contact-fab" onclick="toggleContactMenu()" aria-label="Contattaci">
+        📞
+    </button>
+</div>
+
+<script>
+    function toggleContactMenu() {
+        const widget = document.getElementById('contactWidget');
+        const options = widget.querySelector('.contact-options');
+        widget.classList.toggle('open');
+        options.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>
