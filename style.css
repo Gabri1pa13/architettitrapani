@@ -9,7 +9,6 @@
     --white: #ffffff;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Montserrat', sans-serif;
-    --max-width: 1200px;
 }
 
 * {
@@ -48,7 +47,7 @@ ul {
    ========================================= */
 .container {
     width: 90%;
-    max-width: var(--max-width);
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -84,7 +83,7 @@ ul {
     position: absolute;
     width: 100%;
     top: 0;
-    z-index: 1000; /* FIX: sopra hero e sopra tutto su mobile */
+    z-index: 1000;
     background: linear-gradient(rgba(0,0,0,0.9), transparent);
 }
 
@@ -99,8 +98,8 @@ ul {
     font-weight: 700;
     color: var(--white);
     letter-spacing: 1px;
-    z-index: 1001; /* Sopra il menu mobile */
-    position: relative; /* FIX: rende effettivo lo z-index */
+    z-index: 1001;
+    position: relative;
 }
 
 .nav-links {
@@ -130,7 +129,7 @@ ul {
     display: none; /* Nascosto su desktop */
     cursor: pointer;
     z-index: 1001;
-    position: relative; /* FIX: rende effettivo lo z-index */
+    position: relative;
 }
 
 .burger div {
@@ -283,7 +282,45 @@ ul {
 }
 
 /* =========================================
-   7. PORTFOLIO
+   7. SPLIT SECTIONS
+   ========================================= */
+.split-section {
+    padding: 80px 0;
+}
+
+.split-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.split-text h2 {
+    font-family: var(--font-heading);
+    margin-bottom: 15px;
+}
+
+.split-text p {
+    color: var(--text-grey);
+    margin-bottom: 15px;
+}
+
+.split-image {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.reverse .split-container {
+    direction: rtl;
+}
+
+.reverse .split-text,
+.reverse .split-image {
+    direction: ltr;
+}
+
+/* =========================================
+   8. PORTFOLIO
    ========================================= */
 .portfolio {
     padding: 80px 0;
@@ -311,7 +348,7 @@ ul {
 }
 
 /* =========================================
-   8. TESTIMONIALS
+   9. TESTIMONIALS
    ========================================= */
 .testimonials {
     padding: 80px 0;
@@ -339,7 +376,7 @@ ul {
 }
 
 /* =========================================
-   9. BLOG SECTION
+   10. BLOG SECTION
    ========================================= */
 .blog {
     padding: 80px 0;
@@ -383,7 +420,7 @@ ul {
 }
 
 /* =========================================
-   10. CONTACT
+   11. CONTACT
    ========================================= */
 .contact {
     padding: 80px 0;
@@ -410,7 +447,7 @@ ul {
 }
 
 /* =========================================
-   11. FOOTER
+   12. FOOTER
    ========================================= */
 .footer {
     padding: 30px 0;
@@ -430,44 +467,51 @@ ul {
     /* Gestione Menu Mobile */
     .burger {
         display: block;
+        z-index: 9999;
+        position: relative;
     }
 
     .nav-links {
         position: fixed;
+        top: 0;
         right: 0;
         height: 100vh;
-        top: 0;
+        width: 75%; /* Larghezza cassetto */
         background-color: var(--primary-color);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 75%; /* Larghezza cassetto */
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
-        z-index: 999; /* FIX: più alto */
-        pointer-events: none; /* FIX: quando è chiuso non blocca i tap sul burger */
+        z-index: 9998;
         box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+        pointer-events: none;
     }
 
     .nav-links-active {
-        transform: translateX(0%);
-        pointer-events: auto; /* FIX: quando è aperto torna cliccabile */
+        transform: translateX(0%) !important;
+        pointer-events: auto;
     }
 
     .nav-links li {
         opacity: 0;
         margin: 20px 0;
     }
-    
+
     .nav-links-active li {
         opacity: 1;
         transition: opacity 0.5s ease 0.3s;
     }
 
     /* Layout Stack (Uno sotto l'altro) */
-    .about-content {
-        flex-direction: column;
+    .split-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .reverse .split-container {
+        direction: ltr;
     }
 
     .hero-buttons {
