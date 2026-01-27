@@ -1,32 +1,69 @@
-/* --- RESET & VARIABLES --- */
+/* =========================================
+   1. RESET & VARIABILI GLOBALI
+   ========================================= */
 :root {
-    --primary-color: #1a1a1a; /* Nero morbido */
-    --accent-color: #c5a059; /* Oro/Bronzo per dettagli luxury */
-    --bg-light: #f9f9f9;
-    --text-grey: #555;
+    --primary-color: #1a1a1a;   /* Nero morbido */
+    --accent-color: #c5a059;    /* Oro/Bronzo */
+    --bg-light: #f9f9f9;        /* Grigio chiarissimo */
+    --text-grey: #555;          /* Testo paragrafi */
     --white: #ffffff;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Montserrat', sans-serif;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: var(--font-body);
     color: var(--primary-color);
     line-height: 1.6;
     background-color: var(--white);
+    overflow-x: hidden; /* Fondamentale per mobile: evita scroll orizzontale */
 }
 
-a { text-decoration: none; color: inherit; transition: 0.3s; }
-img { max-width: 100%; display: block; }
-ul { list-style: none; }
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
 
-/* --- TYPOGRAPHY --- */
-h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; margin-bottom: 1rem; }
-h1 { font-size: 2.5rem; color: var(--white); }
-h2 { font-size: 2rem; color: var(--primary-color); }
-p { margin-bottom: 1.5rem; color: var(--text-grey); }
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+/* =========================================
+   2. TIPOGRAFIA
+   ========================================= */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--white);
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+p {
+    margin-bottom: 1.5rem;
+    color: var(--text-grey);
+}
 
 .subtitle {
     display: block;
@@ -38,9 +75,13 @@ p { margin-bottom: 1.5rem; color: var(--text-grey); }
     margin-bottom: 0.5rem;
 }
 
-.highlight { color: var(--accent-color); }
+.highlight {
+    color: var(--accent-color);
+}
 
-/* --- LAYOUT UTILS --- */
+/* =========================================
+   3. LAYOUT & UTILITÀ
+   ========================================= */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -48,7 +89,15 @@ p { margin-bottom: 1.5rem; color: var(--text-grey); }
     padding: 0 20px;
 }
 
-/* --- BUTTONS --- */
+.section-split,
+.section-grid,
+.cta-section {
+    padding: 80px 0;
+}
+
+/* =========================================
+   4. BOTTONI
+   ========================================= */
 .btn-primary {
     display: inline-block;
     padding: 12px 30px;
@@ -58,38 +107,91 @@ p { margin-bottom: 1.5rem; color: var(--text-grey); }
     text-transform: uppercase;
     letter-spacing: 1px;
     border: 2px solid var(--accent-color);
+    cursor: pointer;
 }
+
 .btn-primary:hover {
     background-color: transparent;
     color: var(--accent-color);
 }
 
-/* --- NAVBAR --- */
+/* =========================================
+   5. NAVBAR & MENU
+   ========================================= */
 .navbar {
     padding: 20px 0;
     position: absolute;
     width: 100%;
     top: 0;
     z-index: 100;
-    background: linear-gradient(rgba(0,0,0,0.8), transparent);
+    background: linear-gradient(rgba(0,0,0,0.9), transparent);
 }
+
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--white);
     letter-spacing: 1px;
+    z-index: 101; /* Sopra il menu mobile */
 }
-.nav-links { display: flex; gap: 30px; }
-.nav-links a { color: var(--white); font-weight: 500; font-size: 0.9rem; text-transform: uppercase; }
-.nav-links .btn-nav { border: 1px solid var(--white); padding: 8px 20px; }
-.nav-links .btn-nav:hover { background: var(--white); color: var(--primary-color); }
 
-/* --- HERO SECTION --- */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--white);
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.nav-links .btn-nav {
+    border: 1px solid var(--white);
+    padding: 8px 20px;
+}
+
+.nav-links .btn-nav:hover {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+/* Burger Menu (Icona per Mobile) */
+.burger {
+    display: none; /* Nascosto su desktop */
+    cursor: pointer;
+    z-index: 101;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Animazione Burger */
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* =========================================
+   6. HERO SECTION
+   ========================================= */
 .hero {
     height: 90vh;
     background-size: cover;
@@ -98,94 +200,74 @@ p { margin-bottom: 1.5rem; color: var(--text-grey); }
     align-items: center;
     text-align: center;
 }
-.hero-content { max-width: 800px; }
-.hero-content p { color: #ddd; font-size: 1.2rem; margin-bottom: 2rem; }
 
-/* --- AWARD BANNER --- */
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content p {
+    color: #ddd;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* =========================================
+   7. SEZIONI STANDARD
+   ========================================= */
 .award-banner {
     background-color: var(--primary-color);
     color: var(--white);
     text-align: center;
     padding: 15px 0;
 }
-.award-banner p { margin: 0; color: var(--white); font-size: 0.9rem; }
 
-/* --- SPLIT SECTIONS (Image + Text) --- */
-.section-split { padding: 80px 0; }
+.award-banner p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
 .split-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
 }
-.reverse .split-container { direction: rtl; }
-.reverse .split-text { direction: ltr; }
+
+.reverse .split-container {
+    direction: rtl;
+}
+
+.reverse .split-text {
+    direction: ltr;
+}
+
 .split-image img {
     box-shadow: 0 20px 50px rgba(0,0,0,0.1);
 }
 
-/* --- GRID GALLERY --- */
-.section-grid { padding: 80px 0; background-color: var(--bg-light); }
-.section-header { text-align: center; max-width: 700px; margin: 0 auto 50px; }
+/* =========================================
+   8. BLOG & GRIGLIE
+   ========================================= */
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
 .grid-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
-.grid-item { position: relative; }
-.grid-item img { width: 100%; height: 350px; object-fit: cover; }
-.caption {
-    margin-top: 10px;
-    font-family: var(--font-heading);
-    font-style: italic;
-    color: var(--text-grey);
-}
 
-/* --- CTA SECTION --- */
-.cta-section {
-    padding: 100px 0;
-    background-color: var(--primary-color);
-    color: var(--white);
-    text-align: center;
-}
-.cta-section h2 { color: var(--white); }
-.cta-section p { color: #aaa; }
-.contact-details { margin-top: 40px; border-top: 1px solid #333; padding-top: 20px; font-size: 0.9rem; }
-
-/* --- ABOUT PAGE SPECIFICS --- */
-.page-header {
-    height: 50vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-.page-header::before {
-    content: '';
-    position: absolute; top:0; left:0; width:100%; height:100%;
-    background: rgba(0,0,0,0.4);
-}
-.page-header .container { position: relative; z-index: 2; text-align: center; }
-.text-block { max-width: 800px; margin: 80px auto; }
-.lead { font-size: 1.2rem; color: var(--primary-color); font-weight: 500; }
-.highlight-box {
-    background-color: var(--bg-light);
-    border-left: 4px solid var(--accent-color);
-    padding: 30px;
-    margin-top: 40px;
-}
-
-/* --- FOOTER --- */
-footer { background: #111; color: #555; padding: 30px 0; text-align: center; font-size: 0.8rem; }
-
-/* --- BLOG STYLES --- */
 .blog-card {
     background: #fff;
     border: 1px solid #eee;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blog-card:hover {
@@ -194,13 +276,16 @@ footer { background: #111; color: #555; padding: 30px 0; text-align: center; fon
 }
 
 .card-image img {
-    height: 250px;
     width: 100%;
+    height: 250px;
     object-fit: cover;
 }
 
 .card-content {
     padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-content h3 {
@@ -210,15 +295,59 @@ footer { background: #111; color: #555; padding: 30px 0; text-align: center; fon
 }
 
 .read-more {
+    margin-top: auto; /* Spinge il link in fondo alla card */
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--accent-color);
     text-transform: uppercase;
-    margin-top: 15px;
     display: inline-block;
 }
 
-/* Stile per l'articolo singolo */
+/* Utilità per la Griglia Home */
+.grid-item {
+    position: relative;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.caption {
+    margin-top: 10px;
+    font-family: var(--font-heading);
+    font-style: italic;
+    color: var(--text-grey);
+}
+
+/* =========================================
+   9. PAGINE INTERNE (Chi Siamo, Articoli)
+   ========================================= */
+.page-header {
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
 .article-body {
     max-width: 800px;
     margin: 60px auto;
@@ -251,7 +380,49 @@ footer { background: #111; color: #555; padding: 30px 0; text-align: center; fon
     border-top: 4px solid var(--accent-color);
 }
 
-/* --- FLOATING CONTACT BUTTON (NUOVO) --- */
+.highlight-box {
+    background-color: var(--bg-light);
+    border-left: 4px solid var(--accent-color);
+    padding: 30px;
+    margin-top: 40px;
+}
+
+/* =========================================
+   10. CTA FOOTER & FOOTER
+   ========================================= */
+.cta-section {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 100px 0;
+}
+
+.cta-section h2 {
+    color: var(--white);
+}
+
+.cta-section p {
+    color: #aaa;
+}
+
+.contact-details {
+    margin-top: 40px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    font-size: 0.9rem;
+}
+
+footer {
+    background: #111;
+    color: #555;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* =========================================
+   11. WIDGET CONTATTI (Floating)
+   ========================================= */
 .floating-contact-wrap {
     position: fixed;
     bottom: 30px;
@@ -276,14 +447,13 @@ footer { background: #111; color: #555; padding: 30px 0; text-align: center; fon
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
 .contact-fab:hover {
     transform: scale(1.1);
 }
 
-/* Rotazione e cambio colore quando aperto */
 .floating-contact-wrap.open .contact-fab {
     transform: rotate(45deg);
     background-color: #333;
@@ -319,17 +489,80 @@ footer { background: #111; color: #555; padding: 30px 0; text-align: center; fon
     transition: transform 0.2s;
 }
 
-.contact-item:hover { transform: scale(1.1); }
+.contact-item:hover {
+    transform: scale(1.1);
+}
 
-/* Colori specifici per le icone */
 .phone { background-color: #007bff; }
 .whatsapp { background-color: #25d366; }
 .email { background-color: #ea4335; }
 
-/* --- RESPONSIVE (Sempre alla fine) --- */
+/* =========================================
+   12. MOBILE RESPONSIVE
+   ========================================= */
 @media (max-width: 768px) {
-    h1 { font-size: 1.8rem; }
-    .nav-links { display: none; } /* Semplificazione per mobile */
-    .split-container { grid-template-columns: 1fr; gap: 30px; }
-    .reverse .split-container { direction: ltr; }
+    h1 {
+        font-size: 2rem;
+    }
+
+    /* Gestione Menu Mobile */
+    .burger {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background-color: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 75%; /* Larghezza cassetto */
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 100;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    }
+
+    .nav-links-active {
+        transform: translateX(0%);
+    }
+
+    .nav-links li {
+        opacity: 0;
+        margin: 20px 0;
+    }
+    
+    .nav-links-active li {
+        opacity: 1;
+        transition: opacity 0.5s ease 0.3s;
+    }
+
+    /* Layout Stack (Uno sotto l'altro) */
+    .split-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .reverse .split-container {
+        direction: ltr; /* Reset direzione */
+    }
+
+    .split-image {
+        order: -1; /* Immagine sempre prima del testo */
+        margin-bottom: 30px;
+    }
+
+    /* Padding ridotti su mobile */
+    .section-split, .section-grid, .cta-section {
+        padding: 50px 0;
+    }
+    
+    .floating-contact-wrap {
+        bottom: 20px;
+        right: 20px;
+    }
 }
