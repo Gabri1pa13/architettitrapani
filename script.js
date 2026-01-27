@@ -10,31 +10,22 @@ const navSlide = () => {
 
             // Burger Animation (trasforma le linee in una X)
             burger.classList.toggle('toggle');
-
-            // Link Animation (fade-in)
-            navLinks.forEach((link, index) => {
-                if (link.style.animation) {
-                    link.style.animation = '';
-                } else {
-                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-                }
-            });
         });
     }
 }
 
-// Keyframes Animazione Links
-const styleSheet = document.styleSheets[0];
-styleSheet.insertRule(`
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
+// Funzione per il pulsante contatti
+function toggleContactMenu() {
+    const widget = document.getElementById('contactWidget');
+    const options = widget.querySelector('.contact-options');
+    
+    if(widget && options) {
+        widget.classList.toggle('open');
+        options.classList.toggle('active');
     }
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}`, styleSheet.cssRules.length);
+}
 
-navSlide();
+// Avvia le funzioni quando la pagina è caricata
+document.addEventListener('DOMContentLoaded', () => {
+    navSlide();
+});
