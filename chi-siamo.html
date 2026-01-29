@@ -18,6 +18,11 @@
                 <li><a href="index.html#portfolio">Progetti</a></li>
                 <li><a href="index.html#contatti" class="btn-nav">Contattaci</a></li>
             </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
         </div>
     </nav>
 
@@ -35,7 +40,7 @@
             <hr>
 
             <h3>Il Territorio come materia prima</h3>
-            <p>La provincia di Trapani non è solo un luogo dove costruire: è un paesaggio da ascoltare. Che si tratti di restaurare un <strong>Baglio storico a Marsala</strong>, di inserire una <strong>villa contemporanea tra gli ulivi di Selinunte</strong> o di riqualificare una cantina, la sfida è sempre doppia: rispettare l'anima antica di questi luoghi e rispondere alle esigenze dell'abitare moderno.</p>
+            <p>La provincia di Trapani non è solo un luogo dove costruire: è un paesaggio da ascoltare. Che si tratti di restaurare un <strong>Baglio storico a Marsala</strong>, di inserire una <strong>villa contemporanea tra gli ulivi di Selinunte</strong> o di riqualificare una cantina, <strong>cerchiamo un equilibrio costante tra</strong> l'anima antica di questi luoghi e le necessità dell'architettura contemporanea.</p>
 
             <h3>La nostra forza: Struttura e Radici</h3>
             <p><strong>Studio 4e</strong> nasce per vincere questa sfida. Fondato a Palermo, lo studio ha nel suo DNA il territorio trapanese grazie alla socia fondatrice <strong>Maria Rosaria Piazza</strong>, originaria di questi luoghi. Questa doppia anima è la nostra garanzia:</p>
@@ -64,33 +69,35 @@
     </footer>
 
 
-<div class="floating-contact-wrap" id="contactWidget">
+    <div class="floating-contact-wrap" id="contactWidget">
+        
+        <div class="contact-options">
+            <a href="tel:+393299736697" class="contact-item phone" title="Chiama ora">
+                📞
+            </a>
+            <a href="https://wa.me/393299736697?text=Buongiorno%2C%20vorrei%20informazioni%20su%20un%20progetto." class="contact-item whatsapp" target="_blank" title="Scrivi su WhatsApp">
+                💬
+            </a>
+            <a href="mailto:info@studio4e.it" class="contact-item email" title="Invia Email">
+                ✉️
+            </a>
+        </div>
 
-    <div class="contact-options">
-        <a href="tel:+393299736697" class="contact-item phone" title="Chiama ora">
+        <button class="contact-fab" onclick="toggleContactMenu()" aria-label="Contattaci">
             📞
-        </a>
-        <a href="https://wa.me/393299736697?text=Buongiorno%2C%20vorrei%20informazioni%20su%20un%20progetto." class="contact-item whatsapp" target="_blank" title="Scrivi su WhatsApp">
-            💬
-        </a>
-        <a href="mailto:info@studio4e.it" class="contact-item email" title="Invia Email">
-            ✉️
-        </a>
+        </button>
     </div>
 
-    <button class="contact-fab" onclick="toggleContactMenu()" aria-label="Contattaci">
-        📞
-    </button>
-</div>
-
-<script>
-    function toggleContactMenu() {
-        const widget = document.getElementById('contactWidget');
-        const options = widget.querySelector('.contact-options');
-        widget.classList.toggle('open');
-        options.classList.toggle('active');
-    }
-</script>
+    <script>
+        function toggleContactMenu() {
+            const widget = document.getElementById('contactWidget');
+            const options = widget.querySelector('.contact-options');
+            widget.classList.toggle('open');
+            options.classList.toggle('active');
+        }
+    </script>
+    
+    <script src="script.js"></script>
 
 </body>
 </html>
