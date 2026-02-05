@@ -42,6 +42,32 @@ ul {
 }
 
 /* =========================================
+   1b. ACCESSIBILITÀ
+   ========================================= */
+.skip-to-content {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-color);
+    color: var(--white);
+    padding: 12px 24px;
+    z-index: 9999;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 0 0 4px 4px;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
+*:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* =========================================
    2. TIPOGRAFIA
    ========================================= */
 h1, h2, h3 {
