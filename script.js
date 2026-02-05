@@ -10,6 +10,18 @@ const navSlide = () => {
 
             // Burger Animation (trasforma le linee in una X)
             burger.classList.toggle('toggle');
+
+            // Accessibilità: aggiorna aria-expanded
+            const isOpen = nav.classList.contains('nav-links-active');
+            burger.setAttribute('aria-expanded', isOpen);
+        });
+
+        // Supporto tastiera per burger menu
+        burger.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                burger.click();
+            }
         });
     }
 }
