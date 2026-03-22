@@ -592,3 +592,40 @@ footer {
         right: 20px;
     }
 }
+
+/* ===========================
+   FAQ Section (AIO/GEO)
+   =========================== */
+.faq-section {
+    margin: 50px 0;
+    border-top: 2px solid var(--accent-color);
+    padding-top: 30px;
+}
+
+.faq-section h2 {
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.faq-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.faq-item p {
+    margin: 0;
+    color: #444;
+    line-height: 1.7;
+}
