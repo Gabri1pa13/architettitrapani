@@ -41,3 +41,6 @@ function toggleContactMenu() {
 document.addEventListener('DOMContentLoaded', () => {
     navSlide();
 });
+
+
+/* Google Ads base tag + conversion tracking (Studio 4e) */ (function(){var gs=document.createElement('script');gs.async=true;gs.src='https://www.googletagmanager.com/gtag/js?id=AW-960404172';document.head.appendChild(gs);window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('config','AW-960404172');function fireConversion(s,x){gtag('event','conversion',Object.assign({send_to:s},x||{}));}document.addEventListener('click',function(e){var t=e.target;var wa=t&&t.closest&&t.closest('a[href*="wa.me"]');if(wa){fireConversion('AW-960404172/3zUGCL_QjuUcEMy1-skD');return;}var tel=t&&t.closest&&t.closest('a[href^="tel:"]');if(tel){fireConversion('AW-960404172/pglBCLrRjuUcEMy1-skD',{value:1.0,currency:'EUR'});}},true);})();
